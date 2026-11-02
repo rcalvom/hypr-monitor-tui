@@ -1,9 +1,26 @@
 # hypr-monitor-tui
 
+[![CI](https://github.com/rcalvom/hypr-monitor-tui/actions/workflows/ci.yml/badge.svg)](https://github.com/rcalvom/hypr-monitor-tui/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A Rust terminal user interface for configuring monitors on Hyprland.
 
 Discover connected displays, arrange an extended desktop, mirror one display
 onto another, and adjust display modes through a keyboard-driven interface.
+
+## Screenshots
+
+### Layout editor
+
+![Layout editor with three demo monitors and inline display settings](docs/screenshots/layout.png)
+
+### Profile manager
+
+![Profile manager with saved layouts, readable dates and an embedded control guide](docs/screenshots/profiles.png)
+
+These images render actual TUI output captured through a pseudo-terminal, using
+synthetic monitors and isolated example profiles. Colors depend on the terminal
+palette; the captures use a blue/cyan palette and UbuntuMono Nerd Font.
 
 ## Project status
 
@@ -226,3 +243,16 @@ Host checks verified read-only discovery on Hyprland 0.57.0 and a short-lived
 identification overlay on one output, with unchanged keyboard focus and display
 configuration. Physical multi-output apply, mirroring, hotplug recovery, and
 persistent session startup remain unverified.
+
+GitHub Actions runs formatting, Clippy, unit tests, process/PTY tests and a release
+build on pushes to `main` and pull requests. CI uses a simulated compositor and
+requires no running Hyprland session.
+
+To regenerate the screenshots, build the release binary and run
+`python3 tests/capture-screenshots.py`. This optional helper requires Pillow and
+fontconfig (`python-pillow` and `fontconfig` on Arch Linux). It uses temporary
+configuration and a fake compositor, without reading personal display profiles.
+
+## License
+
+Licensed under the [MIT License](LICENSE).

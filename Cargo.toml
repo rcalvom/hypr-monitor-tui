@@ -3,6 +3,8 @@ name = "hypr-monitor-tui"
 version = "0.1.0"
 edition = "2024"
 description = "Keyboard-driven monitor layout editor for Hyprland"
+license = "MIT"
+repository = "https://github.com/rcalvom/hypr-monitor-tui"
 
 [dependencies]
 anyhow = "1"

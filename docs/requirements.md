@@ -195,7 +195,7 @@ constraints. An extended desktop may also include mirrored outputs.
 - Profile storage format and persistence integration.
 - Mirror behavior for mismatched display modes, based on backend capabilities.
 - Recovery watchdog lifecycle and timeout configuration.
-- Packaging and distribution license.
+- Packaging and distribution channels. The project uses the MIT license.
 
 ## 12. Feasibility assessment
 
